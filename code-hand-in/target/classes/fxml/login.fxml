@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" stylesheets="@../css/login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <VBox fx:id="backBoard" alignment="TOP_CENTER" prefHeight="750.0" prefWidth="500.0">
+         <children>
+            <HBox fx:id="topController" alignment="CENTER_RIGHT" onMouseDragged="#dragWindow" onMousePressed="#dragPressWindow" prefHeight="50.0" prefWidth="500.0">
+               <children>
+                  <Button fx:id="minBtn" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="50.0" prefWidth="50.0" />
+                  <Button fx:id="closeBtn" mnemonicParsing="false" onAction="#closeWindow" prefHeight="50.0" prefWidth="50.0" />
+               </children></HBox>
+            <Label fx:id="productName1" alignment="TOP_LEFT" prefHeight="91.0" prefWidth="500.0" text="CODE">
+               <VBox.margin>
+                  <Insets left="30.0" top="30.0" />
+               </VBox.margin></Label>
+            <Label fx:id="productName2" alignment="TOP_LEFT" prefHeight="163.0" prefWidth="500.0" text="HAND-IN">
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin></Label>
+            <VBox fx:id="loginBox" alignment="TOP_CENTER" prefHeight="318.0" prefWidth="500.0">
+               <children>
+                  <TextField fx:id="accountField" prefHeight="50.0" prefWidth="460.0" promptText="ACCOUNT">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <Line fx:id="accountLine" endX="450.0" />
+                  <PasswordField fx:id="passwordField" prefHeight="50.0" promptText="PASSWORD" onAction="#login"/>
+                  <Line fx:id="passwordLine" endX="450.0" />
+                  <Label fx:id="errorPrompt">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button fx:id="loginBtn" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" onAction="#login">
+                     <VBox.margin>
+                        <Insets left="410.0" top="100.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>

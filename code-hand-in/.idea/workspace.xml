@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\software\Maven\apache-maven-3.6.3\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../software/Maven/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\software\Maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectId" id="1lbLAsWuYLQb9kYR9wGCqKhiU7x" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/icon" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\software\onedrive\code\git\code-hand-in\src\main\resources" />
+      <recent name="D:\code\git\exam_system\resource\fxml" />
+      <recent name="D:\code\git\exam_system\resource" />
+      <recent name="D:\code\git\exam_system\src\sample" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="entity" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\software\onedrive\code\git\code-hand-in\src\main\resources\icon" />
+      <recent name="D:\software\onedrive\code\git\code-hand-in\target\classes\icon" />
+      <recent name="D:\software\onedrive\code\git\code-hand-in\src\main\java\entity" />
+      <recent name="D:\code\git\exam_system\resource\sql" />
+      <recent name="D:\code\git\exam_system\resource\icon" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+    <configuration name="BackBoardTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BackBoardTest" />
+      <module name="code-hand-in" />
+      <option name="VM_PARAMETERS" value="-Dglass.win.uiScale=100%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LoginTest" />
+      <module name="code-hand-in" />
+      <option name="VM_PARAMETERS" value="-Dglass.win.uiScale=100%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="application.Main" />
+      <module name="code-hand-in" />
+      <option name="VM_PARAMETERS" value="-Dglass.win.uiScale=100%" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaperBlockTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PaperBlockTest" />
+      <module name="code-hand-in" />
+      <option name="VM_PARAMETERS" value="-Dglass.win.uiScale=100%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentPaperInterfaceControllerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StudentPaperInterfaceControllerTest" />
+      <module name="code-hand-in" />
+      <option name="VM_PARAMETERS" value="-Dglass.win.uiScale=100%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.BackBoardTest" />
+      <item itemvalue="Application.LoginTest" />
+      <item itemvalue="Application.PaperBlockTest" />
+      <item itemvalue="Application.StudentPaperInterfaceControllerTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LoginTest" />
+        <item itemvalue="Application.StudentPaperInterfaceControllerTest" />
+        <item itemvalue="Application.BackBoardTest" />
+        <item itemvalue="Application.PaperBlockTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+      <created>1359379246138</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1359379246138</updated>
+      <workItem from="1359379250712" duration="1302000" />
+      <workItem from="1607860715424" duration="5822000" />
+      <workItem from="1607915302296" duration="2411000" />
+      <workItem from="1607925639372" duration="7410000" />
+      <workItem from="1607934174114" duration="5980000" />
+      <workItem from="1607958816451" duration="3828000" />
+      <workItem from="1607962993208" duration="83000" />
+      <workItem from="1608001037537" duration="2352000" />
+      <workItem from="1608008214268" duration="8863000" />
+      <workItem from="1608020354475" duration="5310000" />
+      <workItem from="1608029642623" duration="6409000" />
+      <workItem from="1608076869079" duration="10821000" />
+      <workItem from="1608094202639" duration="1188000" />
+      <workItem from="1608098850134" duration="6672000" />
+      <workItem from="1608121128770" duration="132000" />
+      <workItem from="1608121331123" duration="37000" />
+      <workItem from="1608125402472" duration="1721000" />
+      <workItem from="1608170998874" duration="852000" />
+      <workItem from="1608384885595" duration="4537000" />
+      <workItem from="1608446199862" duration="17047000" />
+      <workItem from="1608518525419" duration="2399000" />
+      <workItem from="1608526366900" duration="3039000" />
+      <workItem from="1608530567718" duration="7240000" />
+      <workItem from="1608557084836" duration="11697000" />
+      <workItem from="1608625678500" duration="2755000" />
+      <workItem from="1608635145277" duration="943000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="121" y="0" key="#Project_Structure" timestamp="1608012245789">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="121" y="0" key="#Project_Structure/0.0.1280.689@0.0.1280.689" timestamp="1608012245789" />
+    <state x="28" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608034708853">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="28" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1608034708853" />
+    <state x="374" y="146" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608385356571">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="374" y="146" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.689@0.0.1280.689" timestamp="1608385356571" />
+    <state x="421" y="50" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1608021197707">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="421" y="50" key="#com.intellij.ide.macro.MacrosDialog/0.0.1280.689@0.0.1280.689" timestamp="1608021197707" />
+    <state x="446" y="51" key="#com.intellij.ide.util.MemberChooser" timestamp="1608625702934">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="446" y="51" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1608625702934" />
+    <state x="378" y="140" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1607934347738">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="378" y="140" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.689@0.0.1280.689" timestamp="1607934347738" />
+    <state x="262" y="23" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1607958886814">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="262" y="23" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1280.689@0.0.1280.689" timestamp="1607958886814" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608568229098">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.689@0.0.1280.689" timestamp="1608568229098" />
+    <state x="429" y="104" key="FileChooserDialogImpl" timestamp="1608536561802">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="429" y="104" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1608536561802" />
+    <state width="1237" height="233" key="GridCell.Tab.0.bottom" timestamp="1608631230283">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="233" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1608631230283" />
+    <state width="1877" height="137" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1608032861027" />
+    <state width="1237" height="233" key="GridCell.Tab.0.center" timestamp="1608631230283">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="233" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1608631230283" />
+    <state width="1877" height="137" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1608032861027" />
+    <state width="1237" height="233" key="GridCell.Tab.0.left" timestamp="1608631230282">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="233" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1608631230282" />
+    <state width="1877" height="137" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1608032861027" />
+    <state width="1237" height="233" key="GridCell.Tab.0.right" timestamp="1608631230283">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="233" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1608631230283" />
+    <state width="1877" height="137" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1608032861027" />
+    <state width="1237" height="208" key="GridCell.Tab.1.bottom" timestamp="1608090892098">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="208" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1608090892098" />
+    <state width="1237" height="208" key="GridCell.Tab.1.center" timestamp="1608090892098">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="208" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1608090892098" />
+    <state width="1237" height="208" key="GridCell.Tab.1.left" timestamp="1608090892098">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="208" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1608090892098" />
+    <state width="1237" height="208" key="GridCell.Tab.1.right" timestamp="1608090892098">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="208" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1608090892098" />
+    <state x="242" y="0" key="SettingsEditor" timestamp="1608568915502">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="242" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1608568915502" />
+    <state x="339" y="209" key="classpath-attribute-editor" timestamp="1607934403440">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="339" y="209" key="classpath-attribute-editor/0.0.1280.689@0.0.1280.689" timestamp="1607934403440" />
+    <state x="28" y="0" key="new project wizard" timestamp="1607960585299">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="28" y="0" key="new project wizard/0.0.1280.689@0.0.1280.689" timestamp="1607960585299" />
+    <state x="297" y="153" key="run.anything.popup" timestamp="1608100416971">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1608100416971" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1608461703227">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1608461703227" />
+  </component>
+</project>

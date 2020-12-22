@@ -1,0 +1,53 @@
+#backBoard {
+    -fx-background-color: rgb(250, 250, 250);
+}
+
+#account {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-size: 30px;
+}
+
+#topController {
+    -fx-background-color: #252525;
+}
+
+#topLine {
+    -fx-background-color: orange;
+}
+
+#minBtn, #maxBtn, #closeBtn, #accountBtn, #resizeBtn, #backBtn {
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+}
+
+#minBtn{
+    -fx-background-position: center;
+    -fx-background-image: url('../icon/minIcon.png');
+    -fx-background-size: 25px 30px;
+}
+
+#closeBtn {
+    -fx-background-position: center;
+    -fx-background-image: url('../icon/closeIcon.png');
+    -fx-background-size: 20px 20px;
+}
+
+#maxBtn {
+    -fx-background-position: center;
+    -fx-background-image: url('../icon/maxIcon.png');
+    -fx-background-size: 20px 20px;
+}
+
+#resizeBtn {
+    -fx-background-position: 100%, 100%;
+    -fx-background-image: url('../icon/resizeIcon.png');
+    -fx-background-size: 30px 30px;
+}
+
+#backBtn {
+    -fx-background-position: center;
+    -fx-background-image: url('../icon/backIcon.png');
+    -fx-background-size: 20px 20px;
+}
+

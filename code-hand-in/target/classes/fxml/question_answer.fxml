@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="questionAnswer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/question_answer.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.QuestionAnswerController">
+   <top>
+      <BorderPane fx:id="question" BorderPane.alignment="CENTER">
+         <top>
+            <Label fx:id="questionTitle" prefHeight="60.0" BorderPane.alignment="TOP_LEFT">
+               <BorderPane.margin>
+                  <Insets left="40.0" top="10.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+         <center>
+            <Label fx:id="questionDescribe" wrapText="true" BorderPane.alignment="TOP_LEFT">
+               <BorderPane.margin>
+                  <Insets bottom="30.0" left="40.0" right="40.0" top="20.0" />
+               </BorderPane.margin>
+            </Label>
+         </center>
+      </BorderPane>
+   </top>
+   <center>
+      <TextArea fx:id="code" promptText="CODE HERE" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="40.0" right="40.0" />
+         </padding>
+      </TextArea>
+   </center>
+   <bottom>
+      <HBox alignment="TOP_RIGHT" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="message" text="message" visible="false">
+               <HBox.margin>
+                  <Insets right="30.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <Button fx:id="submit" mnemonicParsing="false" prefHeight="45.0" text="SUBMIT" onAction="#submit">
+               <HBox.margin>
+                  <Insets bottom="20.0" right="40.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

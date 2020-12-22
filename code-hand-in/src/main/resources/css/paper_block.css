@@ -1,0 +1,17 @@
+#subject, #name, #describe {
+    -fx-font-size: 20px;
+    -fx-text-fill: #252525;
+}
+
+#deadline {
+    -fx-font-size: 18px;
+    -fx-text-fill: #252525;
+}
+
+#name {
+    -fx-background-color: transparent;
+}
+
+#paperBlock {
+    -fx-background-color: rgb(235, 235, 235);
+}

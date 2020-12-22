@@ -1,0 +1,48 @@
+
+#backBoard {
+    -fx-background-color: #252525;
+}
+
+#productName1, #productName2 {
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-font-size: 80px;
+    -fx-font-family: "Arial Rounded MT Bold";
+}
+
+#accountField, #passwordField{
+    -fx-background-color: transparent;
+    -fx-border-width: 0px;
+    -fx-text-fill: white;
+}
+
+#accountLine, #passwordLine {
+    -fx-stroke: rgba(255, 255, 255, 0.7);
+}
+
+#loginBtn {
+    -fx-background-image: url('../icon/loginIcon.png');
+    -fx-background-size: 50px 50px;
+    -fx-background-color: transparent;
+}
+
+#minBtn {
+    -fx-background-image: url('../icon/minIcon.png');
+    -fx-background-size: 25px 30px;
+}
+
+#closeBtn {
+    -fx-background-image: url('../icon/closeIcon.png');
+    -fx-background-size: 20px 20px;
+}
+
+#minBtn, #closeBtn {
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+}
+
+#errorPrompt {
+    -fx-text-fill: rgba(255, 255, 255, 0.7);
+}

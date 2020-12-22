@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="selector" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/question_selector.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.QuestionSelectorController">
+   <bottom>
+      <ScrollPane fx:id="slider" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="container" prefHeight="400.0">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding></VBox>
+         </content>
+         <BorderPane.margin>
+            <Insets top="30.0" />
+         </BorderPane.margin>
+      </ScrollPane>
+   </bottom>
+   <top>
+      <BorderPane fx:id="paperIntroduce" BorderPane.alignment="CENTER">
+         <top>
+            <HBox fx:id="title" alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="subjectName" prefHeight="60.0" text="科目名">
+                     <HBox.margin>
+                        <Insets left="40.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Line fx:id="gap" endY="30.0" />
+                  <Label fx:id="paperName" prefHeight="60.0" text="试卷名">
+                     <HBox.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <Label fx:id="describe" text="这是这个试卷的介绍啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" wrapText="true" BorderPane.alignment="TOP_LEFT">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="40.0" right="20.0" top="20.0" />
+               </BorderPane.margin>
+            </Label>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="teacherPrompt" text="老师：">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="teacher" text="王老师">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="deadlinePrompt" text="截止日期：">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="deadline" text="2020-12-12">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </top>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</BorderPane>

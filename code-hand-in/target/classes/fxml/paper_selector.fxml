@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="selector" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/paper_selector.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PaperSelectorController">
+   <children>
+      <HBox prefHeight="50.0">
+         <children>
+            <ComboBox fx:id="subjectSelector" prefHeight="40.0" prefWidth="300.0" promptText="选择科目">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </ComboBox>
+         </children>
+      </HBox>
+      <ScrollPane fx:id="slider">
+         <content>
+            <VBox fx:id="container" prefHeight="200.0">
+               <padding>
+                  <Insets left="20.0" />
+               </padding></VBox>
+         </content>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </ScrollPane>
+   </children>
+</VBox>
