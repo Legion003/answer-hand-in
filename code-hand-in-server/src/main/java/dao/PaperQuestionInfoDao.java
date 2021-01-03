@@ -2,6 +2,8 @@ package dao;
 
 import util.JdbcUtil;
 
+import java.sql.Connection;
+import java.sql.Statement;
 import java.util.List;
 import java.util.Map;
 
@@ -40,5 +42,30 @@ public class PaperQuestionInfoDao {
     public List<Map<String, Object>> searchQuestionScore(int paperId) {
         String sql = "select questionId, fullScore from paper_question where paperId = " + paperId + ";";
         return (List<Map<String, Object>>) JdbcUtil.search(sql, null, true);
+    }
+
+    /**
+     * 插入一个试卷题目对应信息
+     * @param paperId 试卷编号
+     * @param questionId 题目编号
+     * @param fullScore 满分分数
+     * @return 一个整型，成功返回1，否则返回0
+     */
+    public int insertPaperQuestion(int paperId, int questionId, int fullScore){
+        Connection conn = null;
+        Statement stmt = null;
+        int count = 0;
+        try {
+            conn = JdbcUtil.getConnection();
+            String sql = "insert into paper_question (paperId, questionId, fullScore) values (" +
+                    paperId + ", " + questionId + "," + fullScore + ");";
+            stmt = conn.createStatement();
+            count = stmt.executeUpdate(sql);
+        } catch (Exception e){
+            e.printStackTrace();
+        } finally {
+            JdbcUtil.close(stmt, conn);
+        }
+        return count;
     }
 }

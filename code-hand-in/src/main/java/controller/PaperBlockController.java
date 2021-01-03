@@ -1,7 +1,5 @@
 package controller;
 
-import com.alibaba.fastjson.JSONObject;
-import entity.AccountInfo;
 import entity.PaperInfo;
 import entity.SubjectInfo;
 import javafx.application.Platform;
@@ -15,7 +13,6 @@ import util.ConnectUtil;
 
 import java.net.URL;
 import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -93,8 +90,8 @@ public class PaperBlockController implements Initializable {
         Map<String, Object> requestMap = new HashMap<>();
         requestMap.put("paperId", paperInfo.getPaperId());
         ConnectUtil.getPaperQuestion(requestMap);
-        StudentInterfaceController studentInterfaceController = StudentInterfaceController.getInstance();
-        studentInterfaceController.changeToQuestionSelector(subjectInfo.getName());
+        InterfaceController interfaceController = InterfaceController.getInstance();
+        interfaceController.changeToQuestionSelector(subjectInfo.getName());
     }
 
     public GridPane getPaperBlock() {

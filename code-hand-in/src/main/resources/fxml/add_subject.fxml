@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="backBoard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="294.0" prefWidth="467.0" stylesheets="@../css/add_subject.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddSubjectController">
+   <top>
+      <VBox prefHeight="45.0" prefWidth="467.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="topController" alignment="TOP_RIGHT" onMouseDragged="#dragWindow" onMousePressed="#dragPressWindow" prefHeight="42.0" prefWidth="467.0">
+               <children>
+                  <Button fx:id="minBtn" mnemonicParsing="false" onAction="#minimizeWindow" />
+                  <Button fx:id="closeBtn" mnemonicParsing="false" onAction="#closeWindow">
+                     <HBox.margin>
+                        <Insets left="20.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+            <Pane fx:id="topLine" prefHeight="12.0" prefWidth="467.0" />
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="238.0" prefWidth="427.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="subjectNumLabel" text="科目编号" />
+            <TextField fx:id="subjectNum" promptText="由10个以内的数字和英文字母组成">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label fx:id="subjectNameLabel" text="科目名称">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin></Label>
+            <TextField fx:id="subjectName" promptText="限制字数10个字以内" onAction="#submit">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="errorText">
+                     <HBox.margin>
+                        <Insets right="20.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="submitBtn" mnemonicParsing="false" text="SUBMIT" onAction="#submit" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

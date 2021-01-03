@@ -9,6 +9,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -17,7 +18,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import util.InfoStorage;
+import util.StageList;
 
 import java.io.IOException;
 import java.net.URL;
@@ -38,6 +41,10 @@ public class PaperSelectorController implements Initializable {
     ScrollPane slider;
     @FXML
     ComboBox subjectSelector;
+    @FXML
+    Button addSubjectBtn;
+    @FXML
+    Button addPaperBtn;
 
     Stage stage;
     List<GridPane> paperBlockList;
@@ -52,15 +59,21 @@ public class PaperSelectorController implements Initializable {
             public void run() {
                 List<Map> subjectPaperList = InfoStorage.getSubjectPaperList();
                 for (Map subjectPaperMap : subjectPaperList) {
-                    List<PaperInfo> paperInfoList = JSON.parseArray(subjectPaperMap.get("paperInfoList").toString(), PaperInfo.class);
                     SubjectInfo subjectInfo = JSON.parseObject(subjectPaperMap.get("subjectInfo").toString(), SubjectInfo.class);
                     subjectSelector.getItems().add(subjectInfo.getName());
-                    for (PaperInfo paperInfo : paperInfoList) {
-                        GridPane paperBlock = createPaperBlock(paperInfo, subjectInfo);
-                        paperBlockList.add(paperBlock);
+                    if (subjectPaperMap.containsKey("paperInfoList")){
+                        List<PaperInfo> paperInfoList = JSON.parseArray(subjectPaperMap.get("paperInfoList").toString(), PaperInfo.class);
+                        for (PaperInfo paperInfo : paperInfoList) {
+                            GridPane paperBlock = createPaperBlock(paperInfo, subjectInfo);
+                            paperBlockList.add(paperBlock);
+                        }
                     }
                 }
                 subjectSelector.getItems().add("全部");
+                if (InfoStorage.getAccountInfo().isPersonType()) {
+                    addPaperBtn.setVisible(true);
+                    addSubjectBtn.setVisible(true);
+                }
                 initContainer();
                 setSubjectSelectorListener();
                 bindUI();
@@ -97,11 +110,13 @@ public class PaperSelectorController implements Initializable {
     }
 
     public void chooseSubject(Map subjectPaperMap) {
-        List<PaperInfo> paperInfoList = JSON.parseArray(subjectPaperMap.get("paperInfoList").toString(), PaperInfo.class);
-        SubjectInfo subjectInfo = JSON.parseObject(subjectPaperMap.get("subjectInfo").toString(), SubjectInfo.class);
-        for (PaperInfo paperInfo : paperInfoList) {
-            GridPane paperBlock = createPaperBlock(paperInfo, subjectInfo);
-            paperBlockList.add(paperBlock);
+        if (subjectPaperMap.containsKey("paperInfoList")){
+            List<PaperInfo> paperInfoList = JSON.parseArray(subjectPaperMap.get("paperInfoList").toString(), PaperInfo.class);
+            SubjectInfo subjectInfo = JSON.parseObject(subjectPaperMap.get("subjectInfo").toString(), SubjectInfo.class);
+            for (PaperInfo paperInfo : paperInfoList) {
+                GridPane paperBlock = createPaperBlock(paperInfo, subjectInfo);
+                paperBlockList.add(paperBlock);
+            }
         }
     }
 
@@ -131,6 +146,48 @@ public class PaperSelectorController implements Initializable {
         for (GridPane paperBlock : paperBlockList) {
             container.getChildren().add(paperBlock);
         }
+    }
+
+    /**
+     * 添加科目
+     */
+    public void addSubject(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/add_subject.fxml"));
+        BorderPane root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        AddSubjectController controller = loader.getController();
+        Stage newStage = new Stage();
+        StageList.addStage(newStage);
+        controller.setStage(newStage);
+        Scene scene = new Scene(root, 467, 294);
+        newStage.setScene(scene);
+        newStage.initStyle(StageStyle.TRANSPARENT);
+        newStage.show();
+    }
+
+    /**
+     * 添加试卷
+     */
+    public void addPaper(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/add_paper.fxml"));
+        BorderPane root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        AddPaperController controller = loader.getController();
+        Stage newStage = new Stage();
+        StageList.addStage(newStage);
+        controller.setStage(newStage);
+        Scene scene = new Scene(root, 500, 700);
+        newStage.setScene(scene);
+        newStage.initStyle(StageStyle.TRANSPARENT);
+        newStage.show();
     }
 
     public void bindUI(){

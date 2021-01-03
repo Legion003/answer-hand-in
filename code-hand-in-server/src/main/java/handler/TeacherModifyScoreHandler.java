@@ -10,11 +10,11 @@ import util.HandlerUtil;
  * @Date 2020/12/22 20:00
  * @Description
  */
-public class TeacherModifyScore implements RequestHandler {
-    private static final TeacherModifyScore teacherModifyScore = new TeacherModifyScore();
-    private TeacherModifyScore(){}
-    public static TeacherModifyScore getInstance(){
-        return teacherModifyScore;
+public class TeacherModifyScoreHandler implements RequestHandler {
+    private static final TeacherModifyScoreHandler TEACHER_MODIFY_SCORE_HANDLER = new TeacherModifyScoreHandler();
+    private TeacherModifyScoreHandler(){}
+    public static TeacherModifyScoreHandler getInstance(){
+        return TEACHER_MODIFY_SCORE_HANDLER;
     }
     @Override
     public Response handle(JSONObject requestMap) {

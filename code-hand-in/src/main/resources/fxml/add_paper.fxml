@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="backBoard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" stylesheets="@../css/add_paper.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPaperController">
+   <center>
+      <VBox prefHeight="808.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="subjectLabel" text="科目选择" />
+            <ComboBox fx:id="subjectSelector" prefHeight="36.0" prefWidth="464.0" promptText="选择科目">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Label fx:id="paperNameLabel" text="试卷名称">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="paperName" promptText="限制长度为10个字以内">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label fx:id="deadlineLabel" text="截止日期">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="deadline" promptText="可选，格式应为：yyyy-MM-dd">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label fx:id="paperDescribeLabel" text="试卷描述">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <TextArea fx:id="paperDescribe" prefHeight="239.0" prefWidth="440.0" promptText="限制长度为150个字以内">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextArea>
+            <HBox alignment="TOP_RIGHT" prefHeight="42.0" prefWidth="440.0">
+               <children>
+                  <Label fx:id="errorText">
+                     <HBox.margin>
+                        <Insets right="20.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="submitBtn" mnemonicParsing="false" text="SUBMIT" onAction="#submit" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="topController" alignment="TOP_RIGHT" onMouseDragged="#dragWindow" onMousePressed="#dragPressWindow" prefHeight="41.0" prefWidth="500.0">
+               <children>
+                  <Button fx:id="minBtn" mnemonicParsing="false" onAction="#minimizeWindow" />
+                  <Button fx:id="closeBtn" mnemonicParsing="false" onAction="#closeWindow">
+                     <HBox.margin>
+                        <Insets left="20.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+            <Pane fx:id="topLine" prefHeight="7.0" prefWidth="500.0" />
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

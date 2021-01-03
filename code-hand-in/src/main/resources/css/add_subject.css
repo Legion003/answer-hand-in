@@ -1,0 +1,34 @@
+#backBoard {
+    -fx-background-color: rgb(250,250,250);
+}
+#topController {
+    -fx-background-color: #252525;
+}
+#topLine {
+    -fx-background-color: orange;
+}
+#minBtn, #closeBtn {
+    -fx-background-position: center;
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+}
+
+#minBtn {
+    -fx-background-image: url('../icon/minIcon.png');
+    -fx-background-size: 25px 30px;
+}
+
+#closeBtn {
+    -fx-background-image: url('../icon/closeIcon.png');
+    -fx-background-size: 20px 20px;
+}
+
+#subjectName, #subjectNum {
+    -fx-background-color: rgba(200,200,200,0.2);
+}
+
+#submitBtn {
+    -fx-background-color: black;
+    -fx-text-fill: rgb(250, 250, 250);
+    -fx-background-radius: 5;
+}

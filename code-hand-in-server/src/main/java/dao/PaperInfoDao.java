@@ -3,7 +3,9 @@ package dao;
 import entity.PaperInfo;
 import util.JdbcUtil;
 
+import java.sql.Connection;
 import java.sql.Date;
+import java.sql.Statement;
 import java.util.List;
 
 /**
@@ -55,5 +57,37 @@ public class PaperInfoDao {
     public Date searchDate(int paperId) {
         String sql = "select deadline from paper where paperId = " + paperId + ";";
         return (Date) JdbcUtil.search(sql, Date.class, false);
+    }
+
+    /**
+     * 插入一个试卷信息
+     * @param subjectId 科目编号
+     * @param name 试卷名称
+     * @param describe 试卷描述
+     * @param teacherId 教师编号
+     * @return 一个整型，成功返回1，否则返回0
+     */
+    public int insertPaper(String subjectId, String name, String describe, String deadline, String teacherId) {
+        Connection conn = null;
+        Statement stmt = null;
+        int count = 0;
+        try {
+            conn = JdbcUtil.getConnection();
+            String sql = null;
+            if (deadline.equals("")) {
+                sql = "insert into paper (subjectId, name, `describe`, deadline, teacherId) values (\"" +
+                        subjectId + "\", \"" + name + "\", \"" + describe + "\", null , \"" + teacherId + "\");";
+            } else {
+                sql = "insert into paper (subjectId, name, `describe`, deadline, teacherId) values (\"" +
+                        subjectId + "\", \"" + name + "\", \"" + describe + "\", \"" + deadline + "\", \"" + teacherId + "\");";
+            }
+            stmt = conn.createStatement();
+            count = stmt.executeUpdate(sql);
+        } catch (Exception e){
+            e.printStackTrace();
+        } finally {
+            JdbcUtil.close(stmt, conn);
+        }
+        return count;
     }
 }

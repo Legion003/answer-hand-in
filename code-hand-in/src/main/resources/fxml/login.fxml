@@ -19,10 +19,13 @@
                   <Button fx:id="minBtn" mnemonicParsing="false" onAction="#minimizeWindow" prefHeight="50.0" prefWidth="50.0" />
                   <Button fx:id="closeBtn" mnemonicParsing="false" onAction="#closeWindow" prefHeight="50.0" prefWidth="50.0" />
                </children></HBox>
-            <Label fx:id="productName1" alignment="TOP_LEFT" prefHeight="91.0" prefWidth="500.0" text="CODE">
+            <Label fx:id="productName1" alignment="TOP_LEFT" prefHeight="91.0" prefWidth="500.0" text="ANSWER">
                <VBox.margin>
                   <Insets left="30.0" top="30.0" />
-               </VBox.margin></Label>
+               </VBox.margin>
+               <padding>
+                  <Insets top="20.0" />
+               </padding></Label>
             <Label fx:id="productName2" alignment="TOP_LEFT" prefHeight="163.0" prefWidth="500.0" text="HAND-IN">
                <VBox.margin>
                   <Insets left="30.0" />
@@ -35,14 +38,14 @@
                      </opaqueInsets>
                   </TextField>
                   <Line fx:id="accountLine" endX="450.0" />
-                  <PasswordField fx:id="passwordField" prefHeight="50.0" promptText="PASSWORD" onAction="#login"/>
+                  <PasswordField fx:id="passwordField" onAction="#login" prefHeight="50.0" promptText="PASSWORD" />
                   <Line fx:id="passwordLine" endX="450.0" />
                   <Label fx:id="errorPrompt">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>
                   </Label>
-                  <Button fx:id="loginBtn" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" onAction="#login">
+                  <Button fx:id="loginBtn" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" onAction="#login" prefHeight="50.0" prefWidth="50.0">
                      <VBox.margin>
                         <Insets left="410.0" top="100.0" />
                      </VBox.margin>

@@ -94,7 +94,10 @@ public class QuestionSelectorController implements Initializable {
             @Override
             public void run() {
                 QuestionBlockController questionBlockController = loader.getController();
-                questionBlockController.setData(paperId, questionId, count, questionMap.get("title").toString(), questionMap.get("score").toString());
+                String score = questionMap.get("score").toString();
+                String fullScore = questionMap.get("fullScore").toString();
+                String scoreShow = score + "/" + fullScore;
+                questionBlockController.setData(paperId, questionId, count, questionMap.get("title").toString(), scoreShow);
                 questionBlockController.setStage(stage);
                 if (count % 2 == 0) {
                     GridPane questionBlock = questionBlockController.getQuestionBlock();

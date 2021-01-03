@@ -22,7 +22,7 @@ import java.util.Map;
  * @Date 2020/12/19 17:38
  * @Description
  */
-public class MockRequest {
+public class MockStudentRequest {
     String ip = "127.0.0.1";
     int port = 8001;
     Socket socket = null;

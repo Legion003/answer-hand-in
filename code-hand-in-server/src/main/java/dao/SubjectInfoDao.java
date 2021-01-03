@@ -3,10 +3,7 @@ package dao;
 import entity.SubjectInfo;
 import util.JdbcUtil;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,5 +36,31 @@ public class SubjectInfoDao {
     public List<SubjectInfo> searchByTeacherId(String teacherId) {
         String sql = "select * from `subject` where teacherId = \"" + teacherId + "\"";
         return (List<SubjectInfo>) JdbcUtil.search(sql, SubjectInfo.class, true);
+    }
+
+    /**
+     * 插入一个科目信息
+     * @param subjectId 科目编号
+     * @param name 科目名称
+     * @param teacherId 教师编号
+     * @return 一个整型，如果插入成功则返回1，否则返回0
+     */
+    public int insertSubject(String subjectId, String name, String teacherId) {
+        Connection conn = null;
+        Statement stmt = null;
+        int count = 0;
+        try {
+            conn = JdbcUtil.getConnection();
+            String sql = "insert into subject (subjectId, name, teacherId) values (\"" +
+                    subjectId + "\", \"" + name + "\", \"" + teacherId + "\");";
+            stmt = conn.createStatement();
+            count = stmt.executeUpdate(sql);
+
+        } catch (Exception e){
+            e.printStackTrace();
+        } finally {
+            JdbcUtil.close(stmt, conn);
+        }
+        return count;
     }
 }

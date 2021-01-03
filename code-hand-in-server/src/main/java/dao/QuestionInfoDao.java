@@ -3,6 +3,10 @@ package dao;
 import entity.QuestionInfo;
 import util.JdbcUtil;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Map;
 
 /**
@@ -37,4 +41,31 @@ public class QuestionInfoDao {
         return (String) JdbcUtil.search(sql, String.class, false);
     }
 
+    /**
+     * 插入一个题目
+     * @param title 题目标题
+     * @param content 题目内容
+     * @return 若插入成功返回这个题目的id，否则返回0
+     */
+    public int insertQuestion(String title, String content) {
+        Connection conn = null;
+        Statement stmt = null;
+        int id = 0;
+        try {
+            conn = JdbcUtil.getConnection();
+            String sql = "insert into question (title, content) values " +
+                    "(\"" + title + "\", \"" + content + "\");";
+            stmt = conn.createStatement();
+            stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+            ResultSet rs = stmt.getGeneratedKeys();
+            if (rs.next()) {
+                id = rs.getInt(1);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } finally {
+            JdbcUtil.close(stmt, conn);
+        }
+        return id;
+    }
 }

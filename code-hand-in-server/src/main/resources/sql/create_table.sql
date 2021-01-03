@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS `paper` (
 	`subjectId` VARCHAR(10) NOT NULL COMMENT "科目编号",
 	`name` VARCHAR(15) NOT NULL COMMENT "试卷名称",
 	`describe` VARCHAR(200) COMMENT "试卷描述",
+	`deadline` DATE COMMENT "截止日期",
 	`teacherId` VARCHAR(10) NOT NULL COMMENT "出卷教师编号"
 )ENGINE=INNODB DEFAULT CHARSET=utf8;
 

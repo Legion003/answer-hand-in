@@ -19,9 +19,9 @@ import java.util.Map;
 /**
  * @Author Legion
  * @Date 2020/12/15 19:43
- * @Description 学生主界面入口：试卷选择页面
+ * @Description 主界面入口：试卷选择页面
  */
-public class StudentInterfaceController {
+public class InterfaceController {
     private Pane root;
     private PaperSelectorController paperSelectorController;
     private VBox paperSelector;
@@ -32,10 +32,10 @@ public class StudentInterfaceController {
     private Stage stage;
     private InterfacePhase phase = InterfacePhase.STUDENT_PAPER_SELECTOR;
 
-    private static final StudentInterfaceController studentInterfaceController = new StudentInterfaceController();
-    private StudentInterfaceController(){}
-    public static StudentInterfaceController getInstance(){
-        return studentInterfaceController;
+    private static final InterfaceController INTERFACE_CONTROLLER = new InterfaceController();
+    private InterfaceController(){}
+    public static InterfaceController getInstance(){
+        return INTERFACE_CONTROLLER;
     }
 
 
@@ -105,6 +105,7 @@ public class StudentInterfaceController {
 
     public void changeToPaperSelector() {
         questionSelectorController = null;
+        paperSelector = initPaperSelector(stage);
         BorderPane backBoard = backBoardController.getBackBoard();
         backBoard.setLeft(paperSelector);
         Button backBtn = backBoardController.getBackBtn();
@@ -180,4 +181,5 @@ public class StudentInterfaceController {
     public InterfacePhase getPhase() {
         return phase;
     }
+
 }

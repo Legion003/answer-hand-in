@@ -128,13 +128,13 @@ public class BackBoardController implements Initializable {
     }
 
     public void back() {
-        StudentInterfaceController studentInterfaceController = StudentInterfaceController.getInstance();
-        InterfacePhase phase = studentInterfaceController.getPhase();
+        InterfaceController interfaceController = InterfaceController.getInstance();
+        InterfacePhase phase = interfaceController.getPhase();
         if (phase.equals(InterfacePhase.STUDENT_QUESTION_SELECTOR)){
-            studentInterfaceController.changeToPaperSelector();
+            interfaceController.changeToPaperSelector();
         }
         if (phase.equals(InterfacePhase.STUDENT_QUESTION_ANSWER)) {
-            studentInterfaceController.changeToQuestionSelector();
+            interfaceController.changeToQuestionSelector();
         }
     }
 

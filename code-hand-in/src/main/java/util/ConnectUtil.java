@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import controller.LoginController;
 import entity.AccountInfo;
+import entity.PaperInfo;
 import entity.QuestionInfo;
 import entity.StudentAnswerInfo;
 
@@ -131,6 +132,88 @@ public class ConnectUtil {
         return responseMap;
     }
 
+    public static Map<String, Object> getTeacherSubjectPaper() {
+        Map<String, Object> requestMap = new HashMap<>();
+        requestMap = setAccountPassword(requestMap);
+        requestMap.put("requestType", "teacherSubjectPaper");
+        JSONObject responseMap = connect(requestMap);
+        InfoStorage.setSubjectPaperList(JSON.parseArray(responseMap.get("data").toString(), Map.class));
+        System.out.println(JSON.parseArray(responseMap.get("data").toString(), Map.class));
+        return responseMap;
+    }
+
+    public static Map<String, Object> getTeacherPaperQuestion(int paperId){
+        Map<String, Object> requestMap = new HashMap<>();
+        requestMap = setAccountPassword(requestMap);
+        requestMap.put("requestType", "teacherPaperQuestion");
+        requestMap.put("paperId", paperId);
+        JSONObject responseMap = connect(requestMap);
+        InfoStorage.setPaperQuestionMap(JSON.toJavaObject((JSON) responseMap.get("data"), Map.class));
+        return responseMap;
+    }
+
+    public static Map<String, Object> getTeacherQuestionStudent(int paperId, int questionId) {
+        Map<String, Object> requestMap = new HashMap<>();
+        requestMap = setAccountPassword(requestMap);
+        requestMap.put("requestType", "teacherQuestionStudent");
+        requestMap.put("paperId", paperId);
+        requestMap.put("questionId", questionId);
+        JSONObject responseMap = connect(requestMap);
+        Map<String, Object> questionStudent = JSON.toJavaObject((JSON) responseMap.get("data"), Map.class);
+        InfoStorage.setQuestionInfo(JSON.toJavaObject((JSON) questionStudent.get("QuestionInfo"), QuestionInfo.class));
+        InfoStorage.setStudentScoreList(JSON.parseArray(questionStudent.get("StudentScoreList").toString(), Map.class));
+        return responseMap;
+    }
+
+    public static Map<String, Object> getTeacherStudentAnswer(int paperId, int questionId, String studentId){
+        Map<String, Object> requestMap = new HashMap<>();
+        requestMap = setAccountPassword(requestMap);
+        requestMap.put("requestType", "teacherStudentAnswer");
+        requestMap.put("paperId", paperId);
+        requestMap.put("questionId", questionId);
+        requestMap.put("studentId", studentId);
+        JSONObject responseMap = connect(requestMap);
+        InfoStorage.setStudentAnswerInfo(JSON.toJavaObject((JSON) responseMap.get("data"), StudentAnswerInfo.class));
+        return responseMap;
+    }
+
+    public static Map<String, Object> modifyScore(int paperId, int questionId, String studentId, int score) {
+        Map<String, Object> requestMap = new HashMap<>();
+        requestMap = setAccountPassword(requestMap);
+        requestMap.put("requestType", "teacherModifyScore");
+        requestMap.put("paperId", paperId);
+        requestMap.put("questionId", questionId);
+        requestMap.put("studentId", studentId);
+        requestMap.put("score", score);
+        JSONObject responseMap = connect(requestMap);
+        return responseMap;
+    }
+
+    public static Map<String, Object> addSubject(String subjectId, String name) {
+        Map<String, Object> requestMap = new HashMap<>();
+        requestMap = setAccountPassword(requestMap);
+        requestMap.put("requestType", "teacherAddSubject");
+        requestMap.put("subjectId", subjectId);
+        requestMap.put("teacherId", InfoStorage.getAccountInfo().getPersonId());
+        requestMap.put("name", name);
+        JSONObject responseMap = connect(requestMap);
+        return responseMap;
+    }
+
+    public static Map<String, Object> addPaper(String subjectId, String name, String describe, String deadline){
+        Map<String, Object> requestMap = new HashMap<>();
+        requestMap = setAccountPassword(requestMap);
+        requestMap.put("requestType", "teacherAddPaper");
+        requestMap.put("subjectId", subjectId);
+        requestMap.put("teacherId", InfoStorage.getAccountInfo().getPersonId());
+        requestMap.put("name", name);
+        requestMap.put("describe", describe);
+        requestMap.put("deadline", deadline);
+        JSONObject responseMap = connect(requestMap);
+        return responseMap;
+
+    }
+
     private static Map<String, Object> setAccountPassword(Map<String, Object> requestMap) {
         AccountInfo accountInfo = InfoStorage.getAccountInfo();
         String account = accountInfo.getAccount();
@@ -141,6 +224,7 @@ public class ConnectUtil {
         }
         return requestMap;
     }
+
 
 
 }

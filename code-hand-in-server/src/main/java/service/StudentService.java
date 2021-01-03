@@ -51,6 +51,7 @@ public class StudentService {
     /**
      * 根据试卷编号获取试卷信息和其对应的题目信息
      * @param paperId 试卷编号
+     * @param studentId 学生学号
      * @return 试卷信息和相应的题目信息
      */
     public Map<String, Object> getPaperQuestion(int paperId, String studentId) {
@@ -65,6 +66,7 @@ public class StudentService {
             Map<String, Object> map = new HashMap<>();
             map.put("title", questionInfoDao.searchForTitle(questionId));
             map.put("score", studentAnswerInfoDao.searchSingleScore(paperId, questionId, studentId));
+            map.put("fullScore", paperQuestionInfoDao.searchFullScore(paperId, questionId));
             questionSimpleInfoMap.put(questionId, map);
         }
         paperQuestionInfo.put("questionSimpleInfoMap", questionSimpleInfoMap);
@@ -100,6 +102,18 @@ public class StudentService {
     public int writeAnswer(int paperId, int questionId, String studentId, String answer) {
         // 检测是否已经到了deadline
         Date deadline = paperInfoDao.searchDate(paperId);
+        if (deadline == null){
+            StudentAnswerInfo studentAnswerInfo = studentAnswerInfoDao.searchStudentAnswer(paperId, questionId, studentId);
+            // 该学生之前提交过答案
+            if (studentAnswerInfo != null) {
+                // 获取这个答案对应的id
+                int answerId = studentAnswerInfo.getId();
+                // 根据id更新答案
+                return studentAnswerInfoDao.updateAnswer(answerId, answer);
+            } else {
+                return studentAnswerInfoDao.insertAnswer(paperId, questionId, studentId, answer);
+            }
+        }
         Date today = new Date(System.currentTimeMillis());
         // 如果已经超时，则无法写答案
         if (deadline.before(today)) {

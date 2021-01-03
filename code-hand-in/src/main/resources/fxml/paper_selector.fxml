@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="selector" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/paper_selector.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PaperSelectorController">
+<VBox fx:id="selector" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/paper_selector.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PaperSelectorController">
    <children>
       <HBox prefHeight="50.0">
          <children>
@@ -13,6 +14,16 @@
                   <Insets left="10.0" top="10.0" />
                </HBox.margin>
             </ComboBox>
+            <Button fx:id="addSubjectBtn" mnemonicParsing="false" text="+  添加科目" visible="false" onAction="#addSubject">
+               <HBox.margin>
+                  <Insets left="20.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="addPaperBtn" mnemonicParsing="false" text="+  添加试卷" visible="false" onAction="#addPaper">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
       <ScrollPane fx:id="slider">

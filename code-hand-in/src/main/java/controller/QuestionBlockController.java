@@ -8,11 +8,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import util.ConnectUtil;
-import util.InfoStorage;
 
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.ResourceBundle;
 
 /**
@@ -54,8 +51,8 @@ public class QuestionBlockController implements Initializable {
      */
     public void selectQuestion(){
         ConnectUtil.getQuestionAnswer(paperId, questionId);
-        StudentInterfaceController studentInterfaceController = StudentInterfaceController.getInstance();
-        studentInterfaceController.changeToQuestionAnswer();
+        InterfaceController interfaceController = InterfaceController.getInstance();
+        interfaceController.changeToQuestionAnswer();
     }
 
     /**

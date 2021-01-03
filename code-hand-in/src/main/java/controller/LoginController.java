@@ -1,8 +1,5 @@
 package controller;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
-import entity.AccountInfo;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
@@ -32,7 +29,7 @@ public class LoginController implements Initializable {
     Stage stage;
     double oldStageX, oldStageY;
     double oldScreenX, oldScreenY;
-    StudentInterfaceController studentInterfaceController;
+    InterfaceController interfaceController;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -95,22 +92,24 @@ public class LoginController implements Initializable {
         } else {
             // 像服务端发送请求，验证身份
             Map<String, Object> loginResponseMap = ConnectUtil.login(account, password);
-            System.out.println(loginResponseMap);
             if (loginResponseMap.get("code").toString().equals("200")) {
                 errorPrompt.setText("");
                 Map<String, Object> subjectPaperResponseMap = null;
+                // 学生类型
                 if (!InfoStorage.getAccountInfo().isPersonType()) {
                     subjectPaperResponseMap = ConnectUtil.getSubjectPaper();
-                } else {
-                    //TODO: 教师类型
-                    
+                }
+                // 教师类型
+                else {
+                    subjectPaperResponseMap = ConnectUtil.getTeacherSubjectPaper();
+
                 }
                 if (subjectPaperResponseMap.get("code").toString().equals("200")) {
                     stage.hide();
                     Stage newStage = new Stage();
                     StageList.addStage(newStage);
-                    StudentInterfaceController studentInterfaceController = StudentInterfaceController.getInstance();
-                    Pane root = studentInterfaceController.initStudentPaperInterface(newStage);
+                    InterfaceController interfaceController = InterfaceController.getInstance();
+                    Pane root = interfaceController.initStudentPaperInterface(newStage);
                     Scene scene = new Scene(root, 1300, 800);
                     newStage.setScene(scene);
                     newStage.show();
