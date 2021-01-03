@@ -1,9 +1,6 @@
 package util;
 
-import entity.AccountInfo;
-import entity.PaperInfo;
-import entity.QuestionInfo;
-import entity.StudentAnswerInfo;
+import entity.*;
 
 import java.util.List;
 import java.util.Map;
@@ -21,6 +18,7 @@ public class InfoStorage {
     private static StudentAnswerInfo studentAnswerInfo;
     private static PaperInfo paperInfo;
     private static List<Map> studentScoreList;
+    private static SubjectInfo subjectInfo;
 
     public static AccountInfo getAccountInfo() {
         return accountInfo;
@@ -76,5 +74,13 @@ public class InfoStorage {
 
     public static void setStudentScoreList(List<Map> studentScoreList) {
         InfoStorage.studentScoreList = studentScoreList;
+    }
+
+    public static SubjectInfo getSubjectInfo() {
+        return subjectInfo;
+    }
+
+    public static void setSubjectInfo(SubjectInfo subjectInfo) {
+        InfoStorage.subjectInfo = subjectInfo;
     }
 }

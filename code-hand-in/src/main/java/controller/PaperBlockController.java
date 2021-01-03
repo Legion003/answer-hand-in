@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import util.ConnectUtil;
+import util.InfoStorage;
 
 import java.net.URL;
 import java.sql.Date;
@@ -87,11 +88,16 @@ public class PaperBlockController implements Initializable {
     }
 
     public void selectPaper() {
-        Map<String, Object> requestMap = new HashMap<>();
-        requestMap.put("paperId", paperInfo.getPaperId());
-        ConnectUtil.getPaperQuestion(requestMap);
+        if (InfoStorage.getAccountInfo().isPersonType()) {
+            ConnectUtil.getTeacherPaperQuestion(paperInfo.getPaperId());
+        } else {
+            Map<String, Object> requestMap = new HashMap<>();
+            requestMap.put("paperId", paperInfo.getPaperId());
+            ConnectUtil.getPaperQuestion(requestMap);
+        }
         InterfaceController interfaceController = InterfaceController.getInstance();
         interfaceController.changeToQuestionSelector(subjectInfo.getName());
+        InfoStorage.setSubjectInfo(subjectInfo);
     }
 
     public GridPane getPaperBlock() {

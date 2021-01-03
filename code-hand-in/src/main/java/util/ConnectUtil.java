@@ -211,7 +211,32 @@ public class ConnectUtil {
         requestMap.put("deadline", deadline);
         JSONObject responseMap = connect(requestMap);
         return responseMap;
+    }
 
+    public static Map<String, Object> addQuestion(String title, String content, int fullScore) {
+        Map<String, Object> requestMap = new HashMap<>();
+        requestMap = setAccountPassword(requestMap);
+        requestMap.put("requestType", "teacherAddQuestion");
+        Map<String, Object> paperQuestionMap = InfoStorage.getPaperQuestionMap();
+        Map paperInfoMap = JSON.toJavaObject((JSON) paperQuestionMap.get("PaperInfo"), Map.class);
+        requestMap.put("paperId", Integer.parseInt(paperInfoMap.get("paperId").toString()));
+        requestMap.put("title", title);
+        requestMap.put("content", content);
+        requestMap.put("fullScore", fullScore);
+        JSONObject responseMap = connect(requestMap);
+        return responseMap;
+    }
+
+    public static Map<String, Object> addStudent(String studentId) {
+        Map<String, Object> requestMap = new HashMap<>();
+        requestMap = setAccountPassword(requestMap);
+        Map<String, Object> paperQuestion = InfoStorage.getPaperQuestionMap();
+        PaperInfo paperInfo = JSON.toJavaObject((JSON) paperQuestion.get("PaperInfo"), PaperInfo.class);
+        requestMap.put("requestType", "teacherAddStudent");
+        requestMap.put("studentId", studentId);
+        requestMap.put("subjectId", paperInfo.getSubjectId());
+        JSONObject responseMap = connect(requestMap);
+        return responseMap;
     }
 
     private static Map<String, Object> setAccountPassword(Map<String, Object> requestMap) {

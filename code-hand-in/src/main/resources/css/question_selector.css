@@ -40,3 +40,8 @@
     -fx-background-radius: 5em;
 }
 
+#addQuestionBtn, #addStudentBtn {
+    -fx-background-color: transparent;
+    -fx-text-fill: steelblue;
+}
+

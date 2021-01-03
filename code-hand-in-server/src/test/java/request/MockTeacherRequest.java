@@ -72,9 +72,12 @@ public class MockTeacherRequest {
         Map<String, Object> paperQuestion = JSON.toJavaObject((JSON) responseMap.get("data"), Map.class);
         PaperInfo paperInfo = JSON.toJavaObject((JSON) paperQuestion.get("PaperInfo"), PaperInfo.class);
         System.out.println(paperInfo);
-        List<QuestionInfo> questionInfoList = JSON.parseArray(paperQuestion.get("QuestionInfoList").toString(), QuestionInfo.class);
-        for (QuestionInfo questionInfo : questionInfoList) {
-            System.out.println(questionInfo);
+        Map questionSimpleInfoMap = JSON.toJavaObject((JSON) paperQuestion.get("questionSimpleInfoMap"), Map.class);
+        for (Object questionId : questionSimpleInfoMap.keySet()) {
+            Map scoreTitle = JSON.toJavaObject((JSON) questionSimpleInfoMap.get(questionId), Map.class);
+            System.out.println(scoreTitle.get("fullScore"));
+            System.out.println(scoreTitle.get("title"));
+
         }
     }
 
@@ -146,6 +149,30 @@ public class MockTeacherRequest {
         requestMap.put("name", "期末大作业");
         requestMap.put("describe", "一个期末大作业");
         requestMap.put("deadline", "");
+        dos.writeUTF(JSON.toJSONString(requestMap));
+        String response = dis.readUTF();
+        responseMap = JSON.parseObject(response);
+        System.out.println(responseMap);
+    }
+
+    @Test
+    public void addQuestionTest() throws Exception{
+        requestMap.put("requestType", "teacherAddQuestion");
+        requestMap.put("paperId", 2);
+        requestMap.put("title", "试试这个题目");
+        requestMap.put("content", "题目的内容");
+        requestMap.put("fullScore", 100);
+        dos.writeUTF(JSON.toJSONString(requestMap));
+        String response = dis.readUTF();
+        responseMap = JSON.parseObject(response);
+        System.out.println(responseMap);
+    }
+
+    @Test
+    public void addStudentTest() throws Exception{
+        requestMap.put("requestType", "teacherAddStudent");
+        requestMap.put("subjectId", "S002");
+        requestMap.put("studentId", "18372000");
         dos.writeUTF(JSON.toJSONString(requestMap));
         String response = dis.readUTF();
         responseMap = JSON.parseObject(response);

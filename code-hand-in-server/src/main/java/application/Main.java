@@ -52,6 +52,8 @@ public class Main {
         requestTypeMap.put("teacherModifyScore", TeacherModifyScoreHandler.getInstance());
         requestTypeMap.put("teacherAddSubject", TeacherAddSubejctHandler.getInstance());
         requestTypeMap.put("teacherAddPaper", TeacherAddPaperHandler.getInstance());
+        requestTypeMap.put("teacherAddQuestion", TeacherAddQuestionHandler.getInstance());
+        requestTypeMap.put("teacherAddStudent", TeacherAddStudentHandler.getInstance());
     }
     public static void main(String[] args) throws IOException{
         ServerSocket serverSocket = null;

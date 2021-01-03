@@ -1,5 +1,7 @@
 INSERT INTO students VALUES("18372026", "邝倩茵");
 INSERT INTO accounts VALUES("Legion", "123456", "18372026", FALSE);
+INSERT INTO students VALUES ("18372000", "小明");
+INSERT INTO accounts VALUES ("XiaoMing", "123456", "18372000", FALSE);
 
 INSERT INTO teachers VALUES("A001", "王老师");
 INSERT INTO accounts VALUES("Lucky", "123456", "A001", TRUE);

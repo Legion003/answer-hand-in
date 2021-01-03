@@ -79,4 +79,22 @@
    <padding>
       <Insets top="10.0" />
    </padding>
+   <center>
+      <HBox prefHeight="50.0" prefWidth="620.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <Button fx:id="addQuestionBtn" mnemonicParsing="false" text="+ 增加题目" onAction="#addQuestion"/>
+            <Button fx:id="addStudentBtn" mnemonicParsing="false" text="+ 增加学生" onAction="#addStudent">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="20.0" top="10.0" />
+         </padding>
+      </HBox>
+   </center>
 </BorderPane>

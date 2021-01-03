@@ -73,6 +73,9 @@ public class PaperSelectorController implements Initializable {
                 if (InfoStorage.getAccountInfo().isPersonType()) {
                     addPaperBtn.setVisible(true);
                     addSubjectBtn.setVisible(true);
+                } else {
+                    addPaperBtn.setVisible(false);
+                    addSubjectBtn.setVisible(false);
                 }
                 initContainer();
                 setSubjectSelectorListener();

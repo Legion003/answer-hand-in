@@ -165,6 +165,11 @@ public class TeacherService {
      * @return
      */
     public int addStudent(String subjectId, String studentId){
+        StudentInfo studentInfo = StudentInfoDao.getInstance().search(studentId);
+        // 如果没有这个学生登记在册，则增加失败
+        if (studentInfo == null) {
+            return  0;
+        }
         return subjectSignUpDao.insertSignUp(subjectId, studentId);
     }
 

@@ -6,12 +6,18 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import util.InfoStorage;
+import util.StageList;
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
@@ -42,6 +48,10 @@ public class QuestionSelectorController implements Initializable {
     private Label deadline;
     @FXML
     private ScrollPane slider;
+    @FXML
+    private Button addQuestionBtn;
+    @FXML
+    private Button addStudentBtn;
 
     private Stage stage;
     private Map<String, Object> paperQuestionMap;
@@ -63,6 +73,13 @@ public class QuestionSelectorController implements Initializable {
                 initPaperIntroduce();
                 createQuestionBlocks();
                 initContainer();
+                if (InfoStorage.getAccountInfo().isPersonType()) {
+                    addQuestionBtn.setVisible(true);
+                    addStudentBtn.setVisible(true);
+                } else {
+                    addQuestionBtn.setVisible(false);
+                    addStudentBtn.setVisible(false);
+                }
                 bindUI();
             }
         });
@@ -94,10 +111,14 @@ public class QuestionSelectorController implements Initializable {
             @Override
             public void run() {
                 QuestionBlockController questionBlockController = loader.getController();
-                String score = questionMap.get("score").toString();
-                String fullScore = questionMap.get("fullScore").toString();
-                String scoreShow = score + "/" + fullScore;
-                questionBlockController.setData(paperId, questionId, count, questionMap.get("title").toString(), scoreShow);
+                if (InfoStorage.getAccountInfo().isPersonType()) {
+                    questionBlockController.setData(paperId, questionId, count, questionMap.get("title").toString(), questionMap.get("fullScore").toString());
+                } else {
+                    String score = questionMap.get("score").toString();
+                    String fullScore = questionMap.get("fullScore").toString();
+                    String scoreShow = score + "/" + fullScore;
+                    questionBlockController.setData(paperId, questionId, count, questionMap.get("title").toString(), scoreShow);
+                }
                 questionBlockController.setStage(stage);
                 if (count % 2 == 0) {
                     GridPane questionBlock = questionBlockController.getQuestionBlock();
@@ -138,10 +159,52 @@ public class QuestionSelectorController implements Initializable {
         this.subjectData = subject;
     }
 
+    public void addQuestion(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/add_question.fxml"));
+        BorderPane root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        AddQuestionController controller = loader.getController();
+        Stage newStage = new Stage();
+        StageList.addStage(newStage);
+        controller.setStage(newStage);
+        Scene scene = new Scene(root, 500, 700);
+        newStage.setScene(scene);
+        newStage.initStyle(StageStyle.TRANSPARENT);
+        newStage.show();
+    }
+
+    public void addStudent(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/add_student.fxml"));
+        BorderPane root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        AddStudentController controller = loader.getController();
+        Stage newStage = new Stage();
+        StageList.addStage(newStage);
+        controller.setStage(newStage);
+        Scene scene = new Scene(root, 467, 213);
+        newStage.setScene(scene);
+        newStage.initStyle(StageStyle.TRANSPARENT);
+        newStage.show();
+    }
+
+
+
     public void bindUI() {
         slider.prefWidthProperty().bind(stage.widthProperty());
         paperIntroduce.prefWidthProperty().bind(stage.widthProperty());
-        slider.prefHeightProperty().bind(stage.heightProperty().subtract(paperIntroduce.heightProperty()).subtract(160));
+        if (InfoStorage.getAccountInfo().isPersonType()){
+            slider.prefHeightProperty().bind(stage.heightProperty().subtract(paperIntroduce.heightProperty()).subtract(210));
+        } else {
+            slider.prefHeightProperty().bind(stage.heightProperty().subtract(paperIntroduce.heightProperty()).subtract(160));
+        }
     }
 
     public void setStage(Stage stage) {
