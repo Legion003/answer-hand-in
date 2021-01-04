@@ -57,12 +57,14 @@
       <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/util/ConnectUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/util/ConnectUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/paper_selector.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/paper_selector.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/question_answer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/question_answer.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/BackBoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/BackBoardController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/LoginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionSelectorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionSelectorController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/fxml/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/fxml/paper_selector.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/fxml/paper_selector.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/fxml/question_answer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/fxml/question_answer.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/util/ConnectUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/util/ConnectUtil.class" afterDir="false" />
     </list>
@@ -245,7 +247,7 @@
       <workItem from="1609652813014" duration="11911000" />
       <workItem from="1609739363658" duration="6548000" />
       <workItem from="1609749130395" duration="5045000" />
-      <workItem from="1609772684320" duration="2009000" />
+      <workItem from="1609772684320" duration="2291000" />
     </task>
     <servers />
   </component>
