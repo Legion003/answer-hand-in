@@ -3,10 +3,7 @@ package dao;
 import entity.StudentInfo;
 import util.JdbcUtil;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 /**
  * @Author Legion

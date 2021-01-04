@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="backBoard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="500.0" stylesheets="@../css/sign_in.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignInController">
+   <center>
+      <VBox prefHeight="553.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="人员类型" />
+            <ComboBox fx:id="typeSelector" prefHeight="36.0" prefWidth="464.0" promptText="选择类型">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Label text="姓名">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="personName" promptText="限制长度为10个字以内">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="编号">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="personId" promptText="教师请填教师编号，学生请填学生学号">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="账号">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="personAccount" promptText="限制长度为10个字符以内">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="密码">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <PasswordField fx:id="personPassword" promptText="限制长度为10个字符以内">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </PasswordField>
+            <HBox alignment="TOP_RIGHT" prefHeight="42.0" prefWidth="440.0">
+               <children>
+                  <Label fx:id="errorText">
+                     <HBox.margin>
+                        <Insets right="20.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button fx:id="submitBtn" mnemonicParsing="false" onAction="#submit" text="SUBMIT" />
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="30.0" right="30.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="topController" alignment="TOP_RIGHT" onMouseDragged="#dragWindow" onMousePressed="#dragPressWindow" prefHeight="41.0" prefWidth="500.0">
+               <children>
+                  <Button fx:id="minBtn" mnemonicParsing="false" onAction="#minimizeWindow" />
+                  <Button fx:id="closeBtn" mnemonicParsing="false" onAction="#closeWindow">
+                     <HBox.margin>
+                        <Insets left="20.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+            <Pane fx:id="topLine" prefHeight="7.0" prefWidth="500.0" />
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

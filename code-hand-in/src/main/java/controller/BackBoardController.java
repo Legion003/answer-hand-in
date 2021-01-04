@@ -1,5 +1,7 @@
 package controller;
 
+import com.alibaba.fastjson.JSON;
+import entity.PaperInfo;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -9,10 +11,12 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import util.ConnectUtil;
 import util.InfoStorage;
 import util.InterfacePhase;
 
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 /**
@@ -141,6 +145,10 @@ public class BackBoardController implements Initializable {
             interfaceController.changeToQuestionSelector();
         }
         if (phase.equals(InterfacePhase.TEACHER_STUDENT_ANSWER)) {
+            Map<String, Object> paperQuestion = InfoStorage.getPaperQuestionMap();
+            PaperInfo paperInfo = JSON.toJavaObject((JSON) paperQuestion.get("PaperInfo"), PaperInfo.class);
+            ConnectUtil.getTeacherQuestionStudent(paperInfo.getPaperId(), InfoStorage.getQuestionInfo().getQuestionId());
+            interfaceController.initQuestionStudent();
             interfaceController.changeToQuestionStudent();
         }
     }

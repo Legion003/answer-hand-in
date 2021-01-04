@@ -39,11 +39,13 @@ public class TeacherService {
     public List<Map<String, Object>> getSubjectPaper(String teacherId) {
         List<Map<String, Object>> subjectPaperList = new ArrayList<>();
         List<SubjectInfo> subjectInfoList = subjectInfoDao.searchByTeacherId(teacherId);
-        for (SubjectInfo subjectInfo : subjectInfoList) {
-            Map<String, Object> subjectPaperMap = new HashMap<>();
-            subjectPaperMap.put("subjectInfo", subjectInfo);
-            subjectPaperMap.put("paperInfoList", paperInfoDao.searchBySubjectId(subjectInfo.getSubjectId()));
-            subjectPaperList.add(subjectPaperMap);
+        if (subjectInfoList != null) {
+            for (SubjectInfo subjectInfo : subjectInfoList) {
+                Map<String, Object> subjectPaperMap = new HashMap<>();
+                subjectPaperMap.put("subjectInfo", subjectInfo);
+                subjectPaperMap.put("paperInfoList", paperInfoDao.searchBySubjectId(subjectInfo.getSubjectId()));
+                subjectPaperList.add(subjectPaperMap);
+            }
         }
         return subjectPaperList;
     }
@@ -59,9 +61,11 @@ public class TeacherService {
         QuestionInfo questionInfo = questionInfoDao.search(questionId);
         questionStudent.put("QuestionInfo", questionInfo);
         List<Map<String, Object>> studentScoreList = studentAnswerInfoDao.searchStudentScore(paperId, questionId);
-        for (Map<String, Object> studentScoreMap : studentScoreList) {
-            StudentInfo studentInfo = studentInfoDao.search((String) studentScoreMap.get("studentId"));
-            studentScoreMap.put("studentName", studentInfo.getName());
+        if (studentScoreList != null) {
+            for (Map<String, Object> studentScoreMap : studentScoreList) {
+                StudentInfo studentInfo = studentInfoDao.search((String) studentScoreMap.get("studentId"));
+                studentScoreMap.put("studentName", studentInfo.getName());
+            }
         }
         questionStudent.put("StudentScoreList", studentScoreList);
         return questionStudent;
@@ -131,11 +135,13 @@ public class TeacherService {
         paperQuestionInfo.put("teacherInfo", teacherInfo);
         List<Integer> questionIdList = paperQuestionInfoDao.searchQuestion(paperId);
         Map<Integer, Map<String, Object>> questionSimpleInfoMap = new HashMap<>();
-        for (Integer questionId : questionIdList) {
-            Map<String, Object> map = new HashMap<>();
-            map.put("title", questionInfoDao.searchForTitle(questionId));
-            map.put("fullScore", paperQuestionInfoDao.searchFullScore(paperId, questionId));
-            questionSimpleInfoMap.put(questionId, map);
+        if (questionIdList != null) {
+            for (Integer questionId : questionIdList) {
+                Map<String, Object> map = new HashMap<>();
+                map.put("title", questionInfoDao.searchForTitle(questionId));
+                map.put("fullScore", paperQuestionInfoDao.searchFullScore(paperId, questionId));
+                questionSimpleInfoMap.put(questionId, map);
+            }
         }
         paperQuestionInfo.put("questionSimpleInfoMap", questionSimpleInfoMap);
         return paperQuestionInfo;

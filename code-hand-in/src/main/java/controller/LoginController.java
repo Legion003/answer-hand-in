@@ -1,16 +1,22 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import util.ConnectUtil;
 import util.InfoStorage;
 import util.StageList;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
@@ -21,11 +27,14 @@ import java.util.*;
  */
 public class LoginController implements Initializable {
     @FXML
-    TextField accountField;
+    private TextField accountField;
     @FXML
-    TextField passwordField;
+    private TextField passwordField;
     @FXML
-    Label errorPrompt;
+    private Label errorPrompt;
+    @FXML
+    private Button signInBtn;
+
     Stage stage;
     double oldStageX, oldStageY;
     double oldScreenX, oldScreenY;
@@ -121,5 +130,34 @@ public class LoginController implements Initializable {
             }
 
         }
+    }
+
+    /**
+     * 注册
+     */
+    public void signIn(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/sign_in.fxml"));
+        BorderPane root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        SignInController controller = loader.getController();
+        Stage newStage = new Stage();
+        StageList.addStage(newStage);
+        controller.setStage(newStage);
+        Scene scene = new Scene(root, 500, 612);
+        newStage.setScene(scene);
+        newStage.initStyle(StageStyle.TRANSPARENT);
+        newStage.show();
+    }
+
+    public void signInFocus(){
+        signInBtn.setStyle("-fx-text-fill: orange");
+    }
+
+    public void signInExit(){
+        signInBtn.setStyle("-fx-text-fill: white");
     }
 }

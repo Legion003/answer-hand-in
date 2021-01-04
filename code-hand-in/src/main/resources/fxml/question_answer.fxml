@@ -43,7 +43,7 @@
                         <Insets right="30.0" top="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Button fx:id="submit" mnemonicParsing="false" prefHeight="45.0" text="SUBMIT">
+                  <Button fx:id="submit" mnemonicParsing="false" prefHeight="45.0" text="SUBMIT" onAction="#submit">
                      <HBox.margin>
                         <Insets bottom="20.0" right="40.0" />
                      </HBox.margin>

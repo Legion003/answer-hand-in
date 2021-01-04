@@ -39,11 +39,13 @@ public class StudentService {
     public List<Map<String, Object>> getSubjectPaper(String personId) {
         List<Map<String, Object>> subjectPaperInfoList = new ArrayList<>();
         List<String> subjectIdList = subjectSignUpDao.searchSubject(personId);
-        for (String subjectId : subjectIdList) {
-            Map<String, Object> subjectPaperInfo = new HashMap<>();
-            subjectPaperInfo.put("subjectInfo", subjectInfoDao.searchBySubjectId(subjectId));
-            subjectPaperInfo.put("paperInfoList", paperInfoDao.searchBySubjectId(subjectId));
-            subjectPaperInfoList.add(subjectPaperInfo);
+        if(subjectIdList != null) {
+            for (String subjectId : subjectIdList) {
+                Map<String, Object> subjectPaperInfo = new HashMap<>();
+                subjectPaperInfo.put("subjectInfo", subjectInfoDao.searchBySubjectId(subjectId));
+                subjectPaperInfo.put("paperInfoList", paperInfoDao.searchBySubjectId(subjectId));
+                subjectPaperInfoList.add(subjectPaperInfo);
+            }
         }
         return subjectPaperInfoList;
     }

@@ -14,12 +14,12 @@
                   <Insets left="10.0" top="10.0" />
                </HBox.margin>
             </ComboBox>
-            <Button fx:id="addSubjectBtn" mnemonicParsing="false" text="+  添加科目" visible="false" onAction="#addSubject">
+            <Button fx:id="addSubjectBtn" mnemonicParsing="false" onAction="#addSubject" text="+  添加科目" visible="false">
                <HBox.margin>
                   <Insets left="20.0" top="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="addPaperBtn" mnemonicParsing="false" text="+  添加试卷" visible="false" onAction="#addPaper">
+            <Button fx:id="addPaperBtn" mnemonicParsing="false" onAction="#addPaper" text="+  添加试卷" visible="false">
                <HBox.margin>
                   <Insets top="10.0" />
                </HBox.margin>
@@ -28,7 +28,7 @@
       </HBox>
       <ScrollPane fx:id="slider">
          <content>
-            <VBox fx:id="container" prefHeight="200.0">
+            <VBox fx:id="container">
                <padding>
                   <Insets left="20.0" />
                </padding></VBox>

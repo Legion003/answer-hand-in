@@ -20,24 +20,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="768bcb2c-74b6-4e27-94a2-42969a93b6ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/handler/SignInHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/request/MockAccountRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/SignInController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/sign_in.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/sign_in.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/AccountInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AccountInfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/StudentInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/StudentInfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/TeacherInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/TeacherInfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/handler/LoginHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/LoginHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/handler/PaperQuestionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/PaperQuestionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/handler/StudentQuestionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/StudentQuestionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/handler/SubjectPaperHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/SubjectPaperHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/LoginService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/HandlerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/HandlerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/service/LoginServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/service/AccountServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/AccountInfoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/AccountInfoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/StudentInfoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/StudentInfoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/TeacherInfoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/TeacherInfoDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/handler/LoginHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/handler/LoginHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/handler/PaperQuestionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/handler/PaperQuestionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/handler/StudentQuestionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/handler/StudentQuestionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/handler/SubjectPaperHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/handler/SubjectPaperHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/LoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/TeacherService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/HandlerUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/HandlerUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/service/LoginServiceTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/BackBoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/BackBoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/InterfaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/InterfaceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/QuestionAnswerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/QuestionAnswerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/StudentAnswerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/StudentAnswerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/StudentBlockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/StudentBlockController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/entity/StudentAnswerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/entity/StudentAnswerInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/util/InterfacePhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/util/InterfacePhase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/question_answer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/question_answer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/student_answer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/student_answer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/util/ConnectUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/util/ConnectUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/question_answer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/question_answer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/student_answer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/student_answer.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/BackBoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/BackBoardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionAnswerController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionAnswerController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionAnswerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionAnswerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/css/question_answer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/css/question_answer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/entity/StudentAnswerInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/entity/StudentAnswerInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionSelectorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionSelectorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/fxml/login.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/fxml/question_answer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/fxml/question_answer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/util/InterfacePhase.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/util/InterfacePhase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/util/ConnectUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/util/ConnectUtil.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +133,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MockTeacherRequest.addQuestionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MockAccountRequest.signInTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code-hand-in-server" />
       <extension name="coverage">
         <pattern>
@@ -115,8 +142,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="request" />
-      <option name="MAIN_CLASS_NAME" value="request.MockTeacherRequest" />
-      <option name="METHOD_NAME" value="addQuestionTest" />
+      <option name="MAIN_CLASS_NAME" value="request.MockAccountRequest" />
+      <option name="METHOD_NAME" value="signInTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -173,10 +200,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MockAccountRequest.signInTest" />
         <item itemvalue="JUnit.MockTeacherRequest.studentAnswerTest" />
         <item itemvalue="JUnit.MockTeacherRequest.questionStudentTest" />
         <item itemvalue="JUnit.MockTeacherRequest.addStudentTest" />
-        <item itemvalue="JUnit.MockTeacherRequest.addQuestionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +244,8 @@
       <workItem from="1609594500598" duration="2652000" />
       <workItem from="1609652813014" duration="11911000" />
       <workItem from="1609739363658" duration="6548000" />
-      <workItem from="1609749130395" duration="1524000" />
+      <workItem from="1609749130395" duration="5045000" />
+      <workItem from="1609772684320" duration="2009000" />
     </task>
     <servers />
   </component>
@@ -237,18 +265,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="58" key="#com.intellij.ide.util.MemberChooser" timestamp="1609662806353">
+    <state x="446" y="58" key="#com.intellij.ide.util.MemberChooser" timestamp="1609753427875">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="446" y="58" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1609662806353" />
+    <state x="446" y="58" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1609753427875" />
     <state x="419" y="212" width="443" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1608262590187">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="419" y="212" width="443" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.689@0.0.1280.689" timestamp="1608262590187" />
-    <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1608705974758">
+    <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609752400832">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.689@0.0.1280.689" timestamp="1608705974758" />
+    <state x="338" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.689@0.0.1280.689" timestamp="1609752400832" />
     <state x="371" y="92" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1608362772852">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -257,22 +285,22 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="311" y="52" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1608557609190" />
-    <state width="1237" height="214" key="GridCell.Tab.0.bottom" timestamp="1609750020338">
+    <state width="1237" height="214" key="GridCell.Tab.0.bottom" timestamp="1609774410219">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="214" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1609750020338" />
-    <state width="1237" height="214" key="GridCell.Tab.0.center" timestamp="1609750020338">
+    <state width="1237" height="214" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1609774410219" />
+    <state width="1237" height="214" key="GridCell.Tab.0.center" timestamp="1609774410219">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="214" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1609750020338" />
-    <state width="1237" height="214" key="GridCell.Tab.0.left" timestamp="1609750020338">
+    <state width="1237" height="214" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1609774410219" />
+    <state width="1237" height="214" key="GridCell.Tab.0.left" timestamp="1609774410219">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="214" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1609750020338" />
-    <state width="1237" height="214" key="GridCell.Tab.0.right" timestamp="1609750020338">
+    <state width="1237" height="214" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1609774410219" />
+    <state width="1237" height="214" key="GridCell.Tab.0.right" timestamp="1609774410219">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="214" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1609750020338" />
+    <state width="1237" height="214" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1609774410219" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1608696185964">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

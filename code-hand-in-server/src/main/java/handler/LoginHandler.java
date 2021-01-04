@@ -4,8 +4,6 @@ import bean.Response;
 import com.alibaba.fastjson.JSONObject;
 import dao.AccountInfoDao;
 import entity.AccountInfo;
-import service.LoginService;
-import util.HandlerUtil;
 
 /**
  * @Author Legion

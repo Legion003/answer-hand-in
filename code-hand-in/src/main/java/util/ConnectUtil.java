@@ -138,7 +138,6 @@ public class ConnectUtil {
         requestMap.put("requestType", "teacherSubjectPaper");
         JSONObject responseMap = connect(requestMap);
         InfoStorage.setSubjectPaperList(JSON.parseArray(responseMap.get("data").toString(), Map.class));
-        System.out.println(JSON.parseArray(responseMap.get("data").toString(), Map.class));
         return responseMap;
     }
 
@@ -248,6 +247,18 @@ public class ConnectUtil {
             requestMap.put("password", password);
         }
         return requestMap;
+    }
+
+    public static Map<String, Object> signIn(String name, String personId, String account,String password, boolean personType) {
+        Map<String, Object> requestMap = new HashMap<>();
+        requestMap.put("requestType", "signIn");
+        requestMap.put("account", account);
+        requestMap.put("password", password);
+        requestMap.put("name", name);
+        requestMap.put("personId", personId);
+        requestMap.put("personType", personType);
+        JSONObject responseMap = connect(requestMap);
+        return responseMap;
     }
 
 

@@ -1,12 +1,7 @@
 package util;
 
 import com.alibaba.fastjson.JSONObject;
-import com.sun.net.httpserver.HttpExchange;
-import service.LoginService;
-
-import java.io.IOException;
-import java.io.OutputStream;
-import java.net.URI;
+import service.AccountService;
 
 /**
  * @Author Legion
@@ -20,14 +15,14 @@ public class HandlerUtil {
      * @return 当验证失败时返回null，验证成功时返回人员编号
      */
     public static String verify(JSONObject requestMap){
-        LoginService loginService = LoginService.getInstance();
+        AccountService accountService = AccountService.getInstance();
         Object account = requestMap.get("account");
         Object password = requestMap.get("password");
         // 缺少account或password参数
         if (account == null || password == null) {
             return null;
         }
-        String personId = loginService.checkAccount(account.toString(), password.toString());
+        String personId = accountService.checkAccount(account.toString(), password.toString());
         return personId;
     }
 }

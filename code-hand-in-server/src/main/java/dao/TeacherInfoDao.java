@@ -3,6 +3,9 @@ package dao;
 import entity.TeacherInfo;
 import util.JdbcUtil;
 
+import java.sql.Connection;
+import java.sql.Statement;
+
 /**
  * @Author Legion
  * @Date 2020/12/16 21:48
@@ -23,6 +26,5 @@ public class TeacherInfoDao {
     public TeacherInfo search(String teacherId){
         String sql = "select * from teachers where teacherId = \"" + teacherId + "\";";
         return (TeacherInfo) JdbcUtil.search(sql, TeacherInfo.class, false);
-
     }
 }
