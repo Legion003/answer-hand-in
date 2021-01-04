@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import util.InfoStorage;
 import util.InterfacePhase;
 
 import java.net.URL;
@@ -133,7 +134,10 @@ public class BackBoardController implements Initializable {
         if (phase.equals(InterfacePhase.STUDENT_QUESTION_SELECTOR)){
             interfaceController.changeToPaperSelector();
         }
-        if (phase.equals(InterfacePhase.STUDENT_QUESTION_ANSWER)) {
+        if (phase.equals(InterfacePhase.STUDENT_QUESTION_ANSWER) && !InfoStorage.getAccountInfo().isPersonType()) {
+            interfaceController.changeToQuestionSelector();
+        }
+        if (phase.equals(InterfacePhase.TEACHER_QUESTION_STUDENT)) {
             interfaceController.changeToQuestionSelector();
         }
     }

@@ -8,8 +8,10 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import util.ConnectUtil;
+import util.InfoStorage;
 
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 /**
@@ -50,9 +52,16 @@ public class QuestionBlockController implements Initializable {
      * 选择题目
      */
     public void selectQuestion(){
-        ConnectUtil.getQuestionAnswer(paperId, questionId);
-        InterfaceController interfaceController = InterfaceController.getInstance();
-        interfaceController.changeToQuestionAnswer();
+        if (InfoStorage.getAccountInfo().isPersonType()) {
+            ConnectUtil.getTeacherQuestionStudent(paperId, questionId);
+            InterfaceController interfaceController = InterfaceController.getInstance();
+            interfaceController.initQuestionStudent();
+            interfaceController.changeToQuestionStudent();
+        } else {
+            ConnectUtil.getQuestionAnswer(paperId, questionId);
+            InterfaceController interfaceController = InterfaceController.getInstance();
+            interfaceController.changeToQuestionAnswer();
+        }
     }
 
     /**

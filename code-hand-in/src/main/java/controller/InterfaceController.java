@@ -4,7 +4,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -26,9 +28,11 @@ public class InterfaceController {
     private PaperSelectorController paperSelectorController;
     private VBox paperSelector;
     private BorderPane questionSelector;
+    private ScrollPane questionStudentSelector;
     private QuestionSelectorController questionSelectorController;
     private QuestionAnswerController questionAnswerController;
     private BackBoardController backBoardController;
+    private QuestionStudentController questionStudentController;
     private Stage stage;
     private InterfacePhase phase = InterfacePhase.STUDENT_PAPER_SELECTOR;
 
@@ -120,6 +124,25 @@ public class InterfaceController {
         phase = InterfacePhase.STUDENT_QUESTION_ANSWER;
     }
 
+    public void changeToQuestionStudent(){
+        BorderPane backBoard = backBoardController.getBackBoard();
+        backBoard.setLeft(questionStudentSelector);
+        phase = InterfacePhase.TEACHER_QUESTION_STUDENT;
+    }
+
+    public void initQuestionStudent(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/question_student.fxml"));
+        questionStudentSelector = null;
+        try {
+            questionStudentSelector = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        questionStudentController = loader.getController();
+        questionStudentController.setStage(stage);
+        questionStudentController.setData(InfoStorage.getQuestionInfo(), InfoStorage.getStudentScoreList());
+    }
+
 
     public Pane initStudentPaperInterface(Stage stage){
         this.stage = stage;
@@ -132,7 +155,6 @@ public class InterfaceController {
         }
         backBoardController = loader.getController();
         backBoardController.setStage(stage);
-
         // 设置登出
         setLogout();
 

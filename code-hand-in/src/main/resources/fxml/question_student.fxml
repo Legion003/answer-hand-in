@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fx:id="backboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/question_student.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.QuestionStudentController">
+   <content>
+      <BorderPane>
+         <top>
+            <VBox fx:id="questionContainer" prefWidth="597.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="questionTitle" text="题目标题">
+                     <VBox.margin>
+                        <Insets left="40.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="questionDescribe" text="题目描述啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊" wrapText="true">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="40.0" right="40.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <VBox fx:id="container" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

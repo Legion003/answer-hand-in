@@ -1,0 +1,12 @@
+#studentId, #studentName, #studentScore {
+    -fx-font-size: 20px;
+    -fx-text-fill: #252525;
+}
+
+#studentName {
+    -fx-background-color: transparent;
+}
+
+#studentBlock {
+    -fx-background-color: rgb(235, 235, 235);
+}
