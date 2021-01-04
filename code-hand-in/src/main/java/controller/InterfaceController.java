@@ -29,10 +29,12 @@ public class InterfaceController {
     private VBox paperSelector;
     private BorderPane questionSelector;
     private ScrollPane questionStudentSelector;
+    private ScrollPane studentAnswer;
     private QuestionSelectorController questionSelectorController;
     private QuestionAnswerController questionAnswerController;
     private BackBoardController backBoardController;
     private QuestionStudentController questionStudentController;
+    private StudentAnswerController studentAnswerController;
     private Stage stage;
     private InterfacePhase phase = InterfacePhase.STUDENT_PAPER_SELECTOR;
 
@@ -78,9 +80,9 @@ public class InterfaceController {
         return selector;
     }
 
-    public BorderPane initQuestionAnswer() {
+    public ScrollPane initQuestionAnswer() {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/question_answer.fxml"));
-        BorderPane questionAnswer = null;
+        ScrollPane questionAnswer = null;
         try {
             questionAnswer = loader.load();
         } catch (IOException e) {
@@ -118,7 +120,7 @@ public class InterfaceController {
     }
 
     public void changeToQuestionAnswer() {
-        BorderPane questionAnswer = initQuestionAnswer();
+        ScrollPane questionAnswer = initQuestionAnswer();
         BorderPane backBoard = backBoardController.getBackBoard();
         backBoard.setLeft(questionAnswer);
         phase = InterfacePhase.STUDENT_QUESTION_ANSWER;
@@ -141,6 +143,25 @@ public class InterfaceController {
         questionStudentController = loader.getController();
         questionStudentController.setStage(stage);
         questionStudentController.setData(InfoStorage.getQuestionInfo(), InfoStorage.getStudentScoreList());
+    }
+
+    public void changeToStudentAnswer(){
+        BorderPane backBoard = backBoardController.getBackBoard();
+        backBoard.setLeft(studentAnswer);
+        phase = InterfacePhase.TEACHER_STUDENT_ANSWER;
+    }
+
+    public void initStudentAnswer(){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/student_answer.fxml"));
+        studentAnswer = null;
+        try {
+            studentAnswer = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        studentAnswerController = loader.getController();
+        studentAnswerController.setStage(stage);
+        studentAnswerController.setData(InfoStorage.getStudentAnswerInfo());
     }
 
 

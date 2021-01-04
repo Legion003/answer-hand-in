@@ -20,19 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="768bcb2c-74b6-4e27-94a2-42969a93b6ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/QuestionStudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/StudentBlockController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/question_student.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/student_block.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/question_student.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/student_block.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/BackBoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/BackBoardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/InterfaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/InterfaceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/QuestionBlockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/QuestionBlockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/QuestionAnswerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/QuestionAnswerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/StudentAnswerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/StudentAnswerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/StudentBlockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/controller/StudentBlockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/entity/StudentAnswerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/entity/StudentAnswerInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/java/util/InterfacePhase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/java/util/InterfacePhase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/PaperBlockController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/PaperBlockController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionBlockController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionBlockController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionBlockController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionBlockController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/util/InfoStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/util/InfoStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/question_answer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/question_answer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/student_answer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/css/student_answer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/question_answer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/question_answer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/student_answer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/src/main/resources/fxml/student_answer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/BackBoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/BackBoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionAnswerController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionAnswerController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionAnswerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/controller/QuestionAnswerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/css/question_answer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/css/question_answer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/entity/StudentAnswerInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/entity/StudentAnswerInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/fxml/question_answer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/fxml/question_answer.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../code-hand-in/target/classes/util/InterfacePhase.class" beforeDir="false" afterPath="$PROJECT_DIR$/../code-hand-in/target/classes/util/InterfacePhase.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +92,7 @@
       <recent name="D:\software\onedrive\code\git\code-hand-in-server\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MockTeacherRequest.questionStudentTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.Main" />
       <module name="code-hand-in-server" />
@@ -134,22 +138,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MockTeacherRequest.paperQuestionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="code-hand-in-server" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="request.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="request" />
-      <option name="MAIN_CLASS_NAME" value="request.MockTeacherRequest" />
-      <option name="METHOD_NAME" value="paperQuestionTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MockTeacherRequest.questionStudentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code-hand-in-server" />
       <extension name="coverage">
@@ -166,13 +154,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MockTeacherRequest.studentAnswerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="code-hand-in-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="request.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="request" />
+      <option name="MAIN_CLASS_NAME" value="request.MockTeacherRequest" />
+      <option name="METHOD_NAME" value="studentAnswerTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MockTeacherRequest.questionStudentTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MockTeacherRequest.studentAnswerTest" />
+        <item itemvalue="JUnit.MockTeacherRequest.questionStudentTest" />
         <item itemvalue="JUnit.MockTeacherRequest.addStudentTest" />
         <item itemvalue="JUnit.MockTeacherRequest.addQuestionTest" />
-        <item itemvalue="JUnit.MockTeacherRequest.paperQuestionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +216,8 @@
       <workItem from="1609567873402" duration="5000" />
       <workItem from="1609594500598" duration="2652000" />
       <workItem from="1609652813014" duration="11911000" />
-      <workItem from="1609739363658" duration="3062000" />
+      <workItem from="1609739363658" duration="6548000" />
+      <workItem from="1609749130395" duration="1524000" />
     </task>
     <servers />
   </component>
@@ -252,22 +257,22 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="311" y="52" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1608557609190" />
-    <state width="1237" height="214" key="GridCell.Tab.0.bottom" timestamp="1609742980980">
+    <state width="1237" height="214" key="GridCell.Tab.0.bottom" timestamp="1609750020338">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="214" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1609742980980" />
-    <state width="1237" height="214" key="GridCell.Tab.0.center" timestamp="1609742980980">
+    <state width="1237" height="214" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1609750020338" />
+    <state width="1237" height="214" key="GridCell.Tab.0.center" timestamp="1609750020338">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="214" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1609742980980" />
-    <state width="1237" height="214" key="GridCell.Tab.0.left" timestamp="1609742980980">
+    <state width="1237" height="214" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1609750020338" />
+    <state width="1237" height="214" key="GridCell.Tab.0.left" timestamp="1609750020338">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="214" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1609742980980" />
-    <state width="1237" height="214" key="GridCell.Tab.0.right" timestamp="1609742980980">
+    <state width="1237" height="214" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1609750020338" />
+    <state width="1237" height="214" key="GridCell.Tab.0.right" timestamp="1609750020338">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="214" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1609742980980" />
+    <state width="1237" height="214" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1609750020338" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1608696185964">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

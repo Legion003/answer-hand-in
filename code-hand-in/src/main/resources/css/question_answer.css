@@ -21,6 +21,9 @@
 .scroll-pane {
     -fx-background-color: transparent;
     -fx-font-size: 10px;
+}
+
+#code .scroll-pane {
     -fx-border-width: 2px;
     -fx-border-color: rgb(230, 230, 230);
 }

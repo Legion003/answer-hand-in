@@ -9,8 +9,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import util.ConnectUtil;
 import util.InfoStorage;
@@ -34,11 +36,12 @@ public class QuestionAnswerController implements Initializable {
     @FXML
     private Label questionTitle;
     @FXML
-    private BorderPane questionAnswer;
+    private ScrollPane questionAnswer;
     @FXML
     private Label questionDescribe;
     @FXML
     private Label message;
+
 
     private Stage stage;
 
@@ -81,9 +84,10 @@ public class QuestionAnswerController implements Initializable {
     }
 
     public void bindUI() {
-        question.prefWidthProperty().bind(stage.widthProperty());
-        code.prefWidthProperty().bind(stage.widthProperty());
-        code.prefHeightProperty().bind(stage.heightProperty().subtract(question.heightProperty()).subtract(175));
+        question.prefWidthProperty().bind(stage.widthProperty().subtract(40));
+        code.prefWidthProperty().bind(stage.widthProperty().subtract(40));
+        questionAnswer.prefWidthProperty().bind(stage.widthProperty());
+        questionAnswer.prefHeightProperty().bind(stage.heightProperty().subtract(110));
     }
 
     public void setStage(Stage stage) {

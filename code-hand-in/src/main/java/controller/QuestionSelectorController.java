@@ -200,11 +200,7 @@ public class QuestionSelectorController implements Initializable {
     public void bindUI() {
         slider.prefWidthProperty().bind(stage.widthProperty());
         paperIntroduce.prefWidthProperty().bind(stage.widthProperty());
-        if (InfoStorage.getAccountInfo().isPersonType()){
-            slider.prefHeightProperty().bind(stage.heightProperty().subtract(paperIntroduce.heightProperty()).subtract(210));
-        } else {
-            slider.prefHeightProperty().bind(stage.heightProperty().subtract(paperIntroduce.heightProperty()).subtract(160));
-        }
+        slider.prefHeightProperty().bind(stage.heightProperty().subtract(paperIntroduce.heightProperty()).subtract(210));
     }
 
     public void setStage(Stage stage) {

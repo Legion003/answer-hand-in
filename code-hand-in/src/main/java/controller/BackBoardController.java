@@ -134,11 +134,14 @@ public class BackBoardController implements Initializable {
         if (phase.equals(InterfacePhase.STUDENT_QUESTION_SELECTOR)){
             interfaceController.changeToPaperSelector();
         }
-        if (phase.equals(InterfacePhase.STUDENT_QUESTION_ANSWER) && !InfoStorage.getAccountInfo().isPersonType()) {
+        if (phase.equals(InterfacePhase.STUDENT_QUESTION_ANSWER)) {
             interfaceController.changeToQuestionSelector();
         }
         if (phase.equals(InterfacePhase.TEACHER_QUESTION_STUDENT)) {
             interfaceController.changeToQuestionSelector();
+        }
+        if (phase.equals(InterfacePhase.TEACHER_STUDENT_ANSWER)) {
+            interfaceController.changeToQuestionStudent();
         }
     }
 

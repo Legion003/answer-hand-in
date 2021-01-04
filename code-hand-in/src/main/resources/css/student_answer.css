@@ -1,0 +1,49 @@
+#questionTitle {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+
+}
+
+#questionDescribe, #answer {
+    -fx-font-size: 20px;
+    -fx-text-fill: #252525;
+}
+
+#errorText, #score {
+    -fx-font-size: 18px;
+}
+
+#submitBtn {
+    -fx-background-color: black;
+    -fx-font-size: 20px;
+    -fx-text-fill: rgb(250, 250, 250);
+    -fx-background-radius: 5;
+}
+
+#questionTitle, #questionDescribe {
+    -fx-text-fill: #252525;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-font-size: 10px;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color:transparent;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: black;
+    -fx-background-radius: 5em;
+}
