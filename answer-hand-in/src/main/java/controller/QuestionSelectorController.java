@@ -87,7 +87,13 @@ public class QuestionSelectorController implements Initializable {
 
     public void initPaperIntroduce() {
         Map paperInfoMap = JSON.toJavaObject((JSON) paperQuestionMap.get("PaperInfo"), Map.class);
-        this.deadlineData = new Date(Long.parseLong(paperInfoMap.get("deadline").toString()));
+        if (paperInfoMap.containsKey(deadline)) {
+            this.deadlineData = new Date(Long.parseLong(paperInfoMap.get("deadline").toString()));
+            this.deadline.setText(this.deadlineData.toString());
+        } else {
+            this.deadlineData = null;
+            this.deadline.setText("");
+        }
         this.describeData = paperInfoMap.get("describe").toString();
         this.paperNameData = paperInfoMap.get("name").toString();
         this.paperId = Integer.parseInt(paperInfoMap.get("paperId").toString());
@@ -98,7 +104,6 @@ public class QuestionSelectorController implements Initializable {
         this.paperName.setText(this.paperNameData);
         this.describe.setText(this.describeData);
         this.teacher.setText(this.teacherData);
-        this.deadline.setText(this.deadlineData.toString());
     }
 
     /**

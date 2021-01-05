@@ -66,13 +66,32 @@ public class SignInController implements Initializable {
         boolean personType;
         if (index == 0) {
             personType = true;
-        } else {
+        } else if (index == 1) {
             personType = false;
+        } else {
+            errorText.setText("please choose personType");
+            return;
         }
         String name = personName.getText();
+        if (name.equals("")){
+            errorText.setText("please input your name");
+            return;
+        }
         String id = personId.getText();
+        if (id.equals("")){
+            errorText.setText("please input your id");
+            return;
+        }
         String account = personAccount.getText();
+        if (account.equals("")) {
+            errorText.setText("please input your account");
+            return;
+        }
         String password = personPassword.getText();
+        if (password.equals("")) {
+            errorText.setText("please input your password");
+            return;
+        }
         Map<String, Object> responseMap = ConnectUtil.signIn(name, id, account, password, personType);
         if (responseMap.get("code").toString().equals("200")){
             StageList.removeStage(stage);

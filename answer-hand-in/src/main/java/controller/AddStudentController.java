@@ -48,6 +48,10 @@ public class AddStudentController {
      */
     public void submit(){
         String id = studentId.getText();
+        if (id.equals("")) {
+            errorText.setText("please input studentId");
+            return;
+        }
         Map<String, Object> responseMap = ConnectUtil.addStudent(id);
         if (responseMap.get("code").toString().equals("200")) {
             StageList.removeStage(stage);

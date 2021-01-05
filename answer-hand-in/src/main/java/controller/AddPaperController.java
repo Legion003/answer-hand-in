@@ -77,12 +77,24 @@ public class AddPaperController implements Initializable {
      */
     public void submit(){
         int index = subjectSelector.getSelectionModel().getSelectedIndex();
+        if (index < 0) {
+            errorText.setText("please choose subject");
+            return;
+        }
         List<Map> subjectPaperList = InfoStorage.getSubjectPaperList();
         Map subjectPaperMap = subjectPaperList.get(index);
         SubjectInfo subjectInfo = JSON.parseObject(subjectPaperMap.get("subjectInfo").toString(), SubjectInfo.class);
         String subjectId = subjectInfo.getSubjectId();
         String name = paperName.getText();
+        if (name.equals("")) {
+            errorText.setText("please input subjectName");
+            return;
+        }
         String describe = paperDescribe.getText();
+        if (describe.equals("")) {
+            errorText.setText("please input describe");
+            return;
+        }
         String dl = deadline.getText();
         Map<String, Object> responseMap = ConnectUtil.addPaper(subjectId, name, describe, dl);
         if (responseMap.get("code").toString().equals("200")) {

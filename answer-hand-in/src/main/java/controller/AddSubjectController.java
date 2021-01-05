@@ -46,7 +46,15 @@ public class AddSubjectController {
      */
     public void submit(){
         String num = subjectNum.getText();
+        if (num.equals("")) {
+            errorText.setText("please input subjectId");
+            return;
+        }
         String name = subjectName.getText();
+        if (name.equals("")){
+            errorText.setText("please input subjectName");
+            return;
+        }
         Map<String, Object> responseMap = ConnectUtil.addSubject(num, name);
         if (responseMap.get("code").toString().equals("200")) {
             Map<String, Object> subjectPaperResponseMap = ConnectUtil.getTeacherSubjectPaper();

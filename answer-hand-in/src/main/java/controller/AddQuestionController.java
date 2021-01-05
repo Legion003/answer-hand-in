@@ -52,7 +52,15 @@ public class AddQuestionController {
      */
     public void submit(){
         String title = questionTitle.getText();
+        if (title.equals("")) {
+            errorText.setText("please input title");
+            return;
+        }
         String content = questionContent.getText();
+        if (content.equals("")) {
+            errorText.setText("please input content");
+            return;
+        }
         int fullScore = 0;
         try{
             fullScore = Integer.parseInt(questionFullScore.getText());
